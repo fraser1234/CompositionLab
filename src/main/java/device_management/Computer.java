@@ -3,6 +3,8 @@ package device_management;
 import Behaviours.IInput;
 import Behaviours.IOutput;
 
+import java.util.ArrayList;
+
 public class Computer {
     private int ram;
     private int hddSize;
@@ -10,11 +12,16 @@ public class Computer {
     private IOutput outputDevice;
     private IInput inputDevice;
 
+//
+////    private ArrayList<IOutput> outputDevices;
+//    private ArrayList<IInput> inputDevices;
+
     public Computer(int ram, int hddSize, IOutput outputDevice, IInput inputDevice) {
         this.ram = ram;
         this.hddSize = hddSize;
         this.outputDevice = outputDevice;
         this.inputDevice = inputDevice;
+//        this.inputDevices = new ArrayList<>();
     }
 
     public int getRam() {
@@ -48,4 +55,12 @@ public class Computer {
     public String inputData(String data) {
         return this.inputDevice.inputData(data);
     }
+//
+//    public void setCurrentInputDevice(String type){
+//        for (IInput inputDeviceToFind : inputDevices){
+//            if (type == inputDeviceToFind.getType()){
+//                this.inputDevice = inputDeviceToFind;
+//            }
+//        }
+//    }
 }
